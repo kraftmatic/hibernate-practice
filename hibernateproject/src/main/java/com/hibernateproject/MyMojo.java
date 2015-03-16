@@ -31,7 +31,7 @@ import java.io.IOException;
  * @phase process-sources
  */
 public class MyMojo
-    extends AbstractMojo
+    extends AbstractsdMojo
 {
     /**
      * Location of the file.
