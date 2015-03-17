@@ -16,6 +16,16 @@
   	<context.path>SpringRestCrud</context.path>  
   </properties>  
   
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>sonar-maven-plugin</artifactId>
+        <version>2.5</version>
+      </plugin>
+    </plugins>
+  </build>
+  
   <dependencies>
   
   	<dependency>
