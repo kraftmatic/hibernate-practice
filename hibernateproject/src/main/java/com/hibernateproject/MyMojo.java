@@ -2,6 +2,7 @@ package com.hibernateproject;
 
 import org.apache.maven.plugin.AbstractMojo;
 import org.apache.maven.plugin.MojoExecutionException;
+import org.jboss.logging.Logger;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -23,6 +24,7 @@ public class MyMojo
      * @required
      */
     private File outputDirectory;
+    static final Logger log = Logger.getLogger(MyMojo.class);
 
     public void execute()
         throws MojoExecutionException
@@ -57,7 +59,7 @@ public class MyMojo
                 }
                 catch ( IOException e )
                 {
-                    e.printStackTrace();
+                    log.warn("Could not write to file");
                 }
             }
         }
