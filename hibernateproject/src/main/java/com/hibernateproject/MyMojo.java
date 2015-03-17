@@ -24,7 +24,7 @@ public class MyMojo
      * @required
      */
     private File outputDirectory;
-    static final Logger LOGGER = Logger.getLogger(MyMojo.class);
+    private static final Logger LOGGER = Logger.getLogger(MyMojo.class);
 
     public void execute()
         throws MojoExecutionException
@@ -59,7 +59,7 @@ public class MyMojo
                 }
                 catch ( IOException e )
                 {
-                    LOGGER.warn("Could not write to file");
+                    LOGGER.warn(e);
                 }
             }
         }
